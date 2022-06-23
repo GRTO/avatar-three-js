@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "webpack serve --mode development",
-    "build": "webpack --mode production",
+    "build": "webpack --mode production --output-path ./dist",
     "lint": "eslint src --color",
     "lint-staged": "lint-staged --config lint-staged.js",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --config=jest.config.js",
