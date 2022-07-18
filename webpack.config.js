@@ -37,6 +37,14 @@ module.exports = function build(env, arg) {
           use: { loader: 'html-loader' },
         },
         {
+          test: /\.(png|svg|jpe?g|bin|gif|glb|gltf)$/,
+          loader: 'file-loader',
+          options: {
+            esModule: false,
+          },
+          type: 'javascript/auto',
+        },
+        {
           test: /\.(s*)css$/,
           include: path.resolve(__dirname, 'src'),
           exclude: /node_modules/,
